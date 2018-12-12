@@ -25,26 +25,11 @@ Without having to specify anything, HTL provides access to all objects that were
 
 These objects provide convenient access to commonly used information. Their content can be accessed with the dot notation, and they can be iterated-through using `data-sly-list` or **`data-sly-repeat`**.
 
-<table border="1" cellpadding="1" cellspacing="0" width="100%"> 
- <tbody>
-  <tr>
-   <th><strong>Variable Name</strong></th> 
-   <th><strong>Description</strong></th> 
-  </tr>
-  <tr>
-   <td><span class="code">properties</span></td> 
-   <td>List of properties of the current <span class="code">Resource</span>.<br /> Backed by <span class="code"><a href="/content/help/en/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
-  </tr>
-  <tr>
-   <td><span class="code">pageProperties</span></td> 
-   <td>List of page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="/content/help/en/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
-  </tr>
-  <tr>
-   <td><span class="code">inheritedPageProperties</span></td> 
-   <td>List of inherited page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="/content/help/en/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
-  </tr>
- </tbody>
-</table>
+|Variable Name|Description|
+|--- |--- |
+|properties|List of properties of the current Resource. Backed by org.apache.sling.api.resource.ValueMap|
+|pageProperties|List of page properties of the current Page. Backed by org.apache.sling.api.resource.ValueMap|
+|inheritedPageProperties|List of inherited page properties of the current Page. Backed by org.apache.sling.api.resource.ValueMap|
 
 ## Java-backed Objects {#java-backed-objects}
 
@@ -52,31 +37,31 @@ Each of the following objects is backed by the corresponding Java object.
 
 The most useful variables in the table below are highlighted in bold.
 
-| Variable Name |Description |  |
-|---|---|---|
-| `component` | `com.day.cq.wcm.api.components.Component` |  |
-| `componentContext` | `com.day.cq.wcm.api.components.ComponentContext` |  |
-| `currentDesign` | `com.day.cq.wcm.api.designer.Design` |  |
-| `currentNode` | `javax.jcr.Node` |  |
-| `currentPage` | `com.day.cq.wcm.api.Page` |  |
-| `currentSession` | `javax.servlet.http.HttpSession` |  |
-| `currentStyle` | `com.day.cq.wcm.api.designer.Style` |  |
-| `designer` | `com.day.cq.wcm.api.designer.Designer` |  |
-| `editContext` | `com.day.cq.wcm.api.components.EditContext` |  |
-| `log` | `org.slf4j.Logger` |  |
-| `out` | `java.io.PrintWriter` |  |
-| `pageManager` | `com.day.cq.wcm.api.PageManager` |  |
-| `reader` | `java.io.BufferedReader` |  |
-| `request` | `org.apache.sling.api.SlingHttpServletRequest` |  |
-| `resolver` | `org.apache.sling.api.resource.ResourceResolver` |  |
-| `resource` | `org.apache.sling.api.resource.Resource` |  |
-| `resourceDesign` | `com.day.cq.wcm.api.designer.Design` |  |
-| `resourcePage` | `com.day.cq.wcm.api.Page` |  |
-| `response` | `org.apache.sling.api.SlingHttpServletResponse` |  |
-| `sling` | `org.apache.sling.api.scripting.SlingScriptHelper` |  |
-| `slyWcmHelper` | `com.adobe.cq.sightly.WCMScriptHelper` |  |
-| `wcmmode` | `com.adobe.cq.sightly.SightlyWCMMode` |  |
-| `xssAPI` | `com.adobe.granite.xss.XSSAPI` |  |
+| Variable Name |Description |
+|---|---|
+| `component` | `com.day.cq.wcm.api.components.Component` |
+| `componentContext` | `com.day.cq.wcm.api.components.ComponentContext` |
+| `currentDesign` | `com.day.cq.wcm.api.designer.Design` |
+| `currentNode` | `javax.jcr.Node` |
+| `currentPage` | `com.day.cq.wcm.api.Page` |
+| `currentSession` | `javax.servlet.http.HttpSession` |
+| `currentStyle` | `com.day.cq.wcm.api.designer.Style` |
+| `designer` | `com.day.cq.wcm.api.designer.Designer` |
+| `editContext` | `com.day.cq.wcm.api.components.EditContext` |
+| `log` | `org.slf4j.Logger` |
+| `out` | `java.io.PrintWriter` |
+| `pageManager` | `com.day.cq.wcm.api.PageManager` |
+| `reader` | `java.io.BufferedReader` |
+| `request` | `org.apache.sling.api.SlingHttpServletRequest` |
+| `resolver` | `org.apache.sling.api.resource.ResourceResolver` |
+| `resource` | `org.apache.sling.api.resource.Resource` |
+| `resourceDesign` | `com.day.cq.wcm.api.designer.Design` |
+| `resourcePage` | `com.day.cq.wcm.api.Page` |
+| `response` | `org.apache.sling.api.SlingHttpServletResponse` |
+| `sling` | `org.apache.sling.api.scripting.SlingScriptHelper` |
+| `slyWcmHelper` | `com.adobe.cq.sightly.WCMScriptHelper` |
+| `wcmmode` | `com.adobe.cq.sightly.SightlyWCMMode` |
+| `xssAPI` | `com.adobe.granite.xss.XSSAPI` |
 
 ## JavaScript-backed Objects {#javascript-backed-objects}
 
