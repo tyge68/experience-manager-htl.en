@@ -37,8 +37,8 @@ Each of the following objects is backed by the corresponding Java object.
 
 The most useful variables in the table below are highlighted in bold.
 
-| Variable Name |Description |
-|---|---|
+|Variable Name|Description|
+|--- |--- |
 | `component` | `com.day.cq.wcm.api.components.Component` |
 | `componentContext` | `com.day.cq.wcm.api.components.ComponentContext` |
 | `currentDesign` | `com.day.cq.wcm.api.designer.Design` |
