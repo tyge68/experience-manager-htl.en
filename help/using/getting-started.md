@@ -46,15 +46,15 @@ Before getting started with the HTML Template Language, let's start with answeri
 **HTL doesn't really have limitations compared to JSP in the sense that what can be done with JSP should also be achievable with HTL. However, HTL is by design stricter than JSP in several aspects, and what can be achieved all in a single JSP file, might need to be separated into a Java class or a JavaScript file to be achievable in HTL. But this is generally desired to ensure a good separation of concerns between the logic and the markup.
 
 **Does HTL support JSP Tag Libraries?  
-**No, but as shown in the [Loading Client Libraries](getting-started.md#LoadingClientLibraries) section, the [template & call](block-statements.md#templatecall) statements offer a similar pattern.
+**No, but as shown in the [Loading Client Libraries](getting-started.md#loading-client-libraries) section, the [template & call](block-statements.md#templatecall) statements offer a similar pattern.
 
 **Can the HTL features be extended on an AEM project?** 
-No, they cannot. HTL has powerful extension mechanisms for reuse of logic (the [Use-API](#UseAPIforAccessingLogic)) and of markup (the [template & call](block-statements.md#templatecall) statements), which can be used to modularize the code of projects.
+No, they cannot. HTL has powerful extension mechanisms for reuse of logic (the [Use-API](#use-api-for-accessing-logic)) and of markup (the [template & call](block-statements.md#templatecall) statements), which can be used to modularize the code of projects.
 
 **What are the main benefits of HTL over JSP?  
 **Security and project efficiency are the main benefits, which are detailed on the [Overview](overview.md).
 
-**Will JSP eventually go away?** 
+**Will JSP eventually go away?**
 At the current date, there are no plans along these lines.
 
 ## Fundamental Concepts of HTL {#fundamental-concepts-of-htl}
@@ -168,7 +168,7 @@ As HTL uses data attributes to define block statements, it is not possible to de
 
 The reason for it is that the content of these contexts is text and not HTML, and contained HTML elements would be considered as simple character data. So without real HTML elements, there also cannot be **`data-sly`** attributes executed.
 
-This may sound like a big restriction, however it is a desired one, because the HTML Template Language shouldn't be abused to generate output that isn't HTML. The [Use-API for Accessing Logic](getting-started.md#UseAPIforAccessingLogic) section below introduces how additional logic can be called from the template, which can be used if it is needed to prepare complex output for these contexts. For instance, an easy way to send data from the back-end to a front-end script, is to have the component's logic to generate a JSON string, which can then be placed in a data attribute with a simple HTL expression.
+This may sound like a big restriction, however it is a desired one, because the HTML Template Language shouldn't be abused to generate output that isn't HTML. The [Use-API for Accessing Logic](#use-api-for-accessing-logic) section below introduces how additional logic can be called from the template, which can be used if it is needed to prepare complex output for these contexts. For instance, an easy way to send data from the back-end to a front-end script, is to have the component's logic to generate a JSON string, which can then be placed in a data attribute with a simple HTL expression.
 
 Following example illustrates the behavior for HTML comments, but in script or style elements, the same behavior would be observed:
 
@@ -302,17 +302,14 @@ Again, this is possible, because HTL understand the HTML syntax and can therefor
 Additionally, the type of the variable placed in the expression matters:
 
 * **String:**
-
-    * **not empty:** Sets the string as attribute value.
-    * **empty:** Removes the attribute altogether.
+  * **not empty:** Sets the string as attribute value.
+  * **empty:** Removes the attribute altogether.
 
 * **Number:** Sets the value as attribute value.  
 
 * **Boolean:**
-
-    * **true:** Displays the attribute without value (as a Boolean HTML attribute).  
-    
-    * **false:** Removes the attribute altogether.
+  * **true:** Displays the attribute without value (as a Boolean HTML attribute
+  * **false:** Removes the attribute altogether.
 
 Here's an example of how a Boolean expression would allow to control a Boolean HTML attribute:
 
@@ -320,7 +317,7 @@ Here's an example of how a Boolean expression would allow to control a Boolean H
 <input type="checkbox" checked="${properties.isChecked}"/>
 ```
 
-For setting attributes, the [ `data-sly-attribute`](block-statements.md#attribute) statement might also be useful.
+For setting attributes, the [`data-sly-attribute`](block-statements.md#attribute) statement might also be useful.
 
 ## Common Patterns with HTL {#common-patterns-with-htl}
 
