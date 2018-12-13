@@ -69,10 +69,10 @@ Here's a first example, which could be contained as is in a **`template.html`** 
 
 Two different kind of syntaxes can be distinguished:
 
-* ** [Block Statements](block-statements.md)** 
+* **[Block Statements](block-statements.md)** 
   To conditionally display the **<h1>** element, a ` [data-sly-test](block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
 
-* ** [Expression Language](expression-language.md)** 
+* **[Expression Language](expression-language.md)** 
   HTL expressions are delimited by characters** ${** and **}**. At runtime, these expressions are evaluated and their value is injected into the outgoing HTML stream.
 
 The two pages linked above provide the detailed list of features available for syntax.
@@ -83,7 +83,7 @@ The two pages linked above provide the detailed list of features available for s
 >
 >The SLY element has been introduced with AEM 6.1, or HTL 1.1.
 >
->Prior to that, the `[data-sly-unwrap](block-statements.md#unwrap)` attribute had to be used instead.
+>Prior to that, the `[data-sly-unwrap](block-statements.md)` attribute had to be used instead.
 
 A central concept of HTL is to offer the possibility of reusing existing HTML elements to define block statements, which avoids the need of inserting additional delimiters to define where the statement starts and ends. This unobtrusive annotation of the markup to transform a static HTML into a functioning dynamic template offers the benefit of not breaking the validity of the HTML code, and therefore to still properly display, even as static files.
 
@@ -321,7 +321,7 @@ This section introduces a few common scenarios and how to best solve them with t
 
 ### Loading Client Libraries {#loading-client-libraries}
 
-In HTL, client libraries are loaded through a helper template provided by AEM, which can be accessed through ` [data-sly-use](block-statements.md#use)`. Three templates are available in this file, which can be called through [ `data-sly-call`](block-statements.md#template-call):
+In HTL, client libraries are loaded through a helper template provided by AEM, which can be accessed through [`data-sly-use`](block-statements.md#use). Three templates are available in this file, which can be called through [ `data-sly-call`](block-statements.md#template-call):
 
 * **`css`** - Loads only the CSS files of the referenced client libraries.
 * **`js`** - Loads only the JavaScript files of the referenced client libraries.

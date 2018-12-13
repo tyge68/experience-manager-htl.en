@@ -10,9 +10,7 @@ topic-tags: html-template-language
 content-type: reference
 discoiquuid: 58aa6ea8-1d45-4f6f-a77e-4819f593a19d
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
+
 ---
 
 # HTL Block Statements{#htl-block-statements}
