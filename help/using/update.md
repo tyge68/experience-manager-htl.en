@@ -31,4 +31,4 @@ In AEM 6.0 and 6.1 HTL was referred to as ‘ Sightly ‘. We are renaming it to
 >
 >This naming change does not impact code or the API, therefore compatibility is not affected. For more information please to refer to the blog article on Experience Matters, that digs deeper into the renaming.
 
-To find out more about HTL and a great place to begin is our official [Getting Started with HTML Templating Language (HTL) Guide](../using/overview.md).
+To find out more about HTL and a great place to begin is our official [Getting Started with HTML Templating Language (HTL) Guide](overview.md).

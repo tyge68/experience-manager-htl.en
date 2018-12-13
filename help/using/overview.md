@@ -49,5 +49,5 @@ The diagram above shows following improvements in efficiency potentially made po
 
 **Read next:**
 
-* [Getting Started with the HTML Template Language](../using/getting-started.md)
+* [Getting Started with the HTML Template Language](getting-started.md)
 

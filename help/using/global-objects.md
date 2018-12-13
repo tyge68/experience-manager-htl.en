@@ -17,7 +17,7 @@ snippet: y
 
 # HTL Global Objects{#htl-global-objects}
 
-Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including **global.jsp**. These objects are in addition to any that may be introduced through the [Use-API](../using/use-api.md).
+Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including **global.jsp**. These objects are in addition to any that may be introduced through the [Use-API](use-api.md).
 
 ## Enumerable Objects {#enumerable-objects}
 

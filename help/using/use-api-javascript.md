@@ -19,7 +19,7 @@ snippet: y
 
 The HTML Template Langugae (HTL) JavaScript Use-API enables a HTL file to access helper code written in JavaScript. This allows all complex business logic to be encapsulated in the JavaScript code, while the HTL code deals only with direct markup production.
 
-### A Simple Example {#a-simple-example}
+## A Simple Example {#a-simple-example}
 
 We define a component, `info`, located at
 
@@ -30,7 +30,7 @@ It contains two files:
 * **`info.js`**: a JavaScript file that defines the use-class.
 * `info.html`: an HTL file that defines the component `info`. This code will use the functionality of `info.js` through the use-API.
 
-#### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
+### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
 ```java
 "use strict";
@@ -42,7 +42,7 @@ use(function () {
 });
 ```
 
-#### /apps/my-example/component/info/info.html {#apps-my-example-component-info-info-html}
+### /apps/my-example/component/info/info.html {#apps-my-example-component-info-info-html}
 
 ```xml
 <div data-sly-use.info="info.js">
@@ -61,7 +61,7 @@ We also create a content node that uses the **`info`** component at
 
 Here is the resulting repository structure:
 
-#### Repository Structure {#repository-structure}
+### Repository Structure {#repository-structure}
 
 ```java
 {

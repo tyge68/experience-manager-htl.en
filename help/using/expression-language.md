@@ -38,7 +38,7 @@ The expression syntax includes [variables](#Variables), [literals](#Literals), [
 
 Variables are containers that store data values or objects. The names of variables are called identifiers.
 
-Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including **global.jsp**. The [Global Objects](../using/global-objects.md) page provides the list of all objects provided access to by HTL.
+Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including **global.jsp**. The [Global Objects](global-objects.md) page provides the list of all objects provided access to by HTL.
 
 ### Property Access {#property-access}
 
@@ -49,7 +49,7 @@ ${currentPage['title']} or ${currentPage["title"]}`
 
 The simpler dot notation should be preferred for most cases, and the brackets notation should be used to access properties that contain invalid identifier characters, or to access properties dynamically. The following two chapters will provide details about these two cases.
 
-The accessed properties can be functions, however passing arguments is not supported, so only functions that don't expect arguments can accessed, like getters. This is a desired limitation, which is intended to reduce the amount of logic embedded into expressions. If needed, the ` [data-sly-use](../using/block-statements.md#use)` statement can be used to pass parameters to the logic.
+The accessed properties can be functions, however passing arguments is not supported, so only functions that don't expect arguments can accessed, like getters. This is a desired limitation, which is intended to reduce the amount of logic embedded into expressions. If needed, the ` [data-sly-use](block-statements.md#use)` statement can be used to pass parameters to the logic.
 
 Also shown in the example above is that Java getter functions, like `getTitle()`, can be accessed without prepending the **`get`**, and by lowering the case of the character that follows.
 

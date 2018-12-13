@@ -23,7 +23,7 @@ The HTML Template Language (HTL) supported by Adobe Experience Manager (AEM) tak
 >
 >To run most examples provided on this page, a live execution environment called the [Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl) can be used.
 >
->The AEM Community has generated a series of [articles, videos and webinars](../using/related-community-articles.md) related to using HTL.
+>The AEM Community has generated a series of [articles, videos and webinars](related-community-articles.md) related to using HTL.
 
 ## HTL over JSP {#htl-over-jsp}
 
@@ -38,7 +38,7 @@ Even within the same component, HTL files can be used alongside JSPs and ESPs. F
 <sly data-sly-include="template.jsp"/>
 ```
 
-#### Frequently Asked Questions {#frequently-asked-questions}
+### Frequently Asked Questions {#frequently-asked-questions}
 
 Before getting started with the HTML Template Language, let's start with answering upfront some questions related to the JSP vs HTL topic.
 
@@ -46,13 +46,13 @@ Before getting started with the HTML Template Language, let's start with answeri
 **HTL doesn't really have limitations compared to JSP in the sense that what can be done with JSP should also be achievable with HTL. However, HTL is by design stricter than JSP in several aspects, and what can be achieved all in a single JSP file, might need to be separated into a Java class or a JavaScript file to be achievable in HTL. But this is generally desired to ensure a good separation of concerns between the logic and the markup.
 
 **Does HTL support JSP Tag Libraries?  
-**No, but as shown in the [Loading Client Libraries](../using/getting-started.md#LoadingClientLibraries) section, the [template & call](../using/block-statements.md#templatecall) statements offer a similar pattern.
+**No, but as shown in the [Loading Client Libraries](getting-started.md#LoadingClientLibraries) section, the [template & call](block-statements.md#templatecall) statements offer a similar pattern.
 
 **Can the HTL features be extended on an AEM project?** 
-No, they cannot. HTL has powerful extension mechanisms for reuse of logic (the [Use-API](#UseAPIforAccessingLogic)) and of markup (the [template & call](../using/block-statements.md#templatecall) statements), which can be used to modularize the code of projects.
+No, they cannot. HTL has powerful extension mechanisms for reuse of logic (the [Use-API](#UseAPIforAccessingLogic)) and of markup (the [template & call](block-statements.md#templatecall) statements), which can be used to modularize the code of projects.
 
 **What are the main benefits of HTL over JSP?  
-**Security and project efficiency are the main benefits, which are detailed on the [Overview](../using/overview.md).
+**Security and project efficiency are the main benefits, which are detailed on the [Overview](overview.md).
 
 **Will JSP eventually go away?** 
 At the current date, there are no plans along these lines.
@@ -73,10 +73,10 @@ Here's a first example, which could be contained as is in a **`template.html`** 
 
 Two different kind of syntaxes can be distinguished:
 
-* ** [Block Statements](../using/block-statements.md)** 
-  To conditionally display the **<h1>** element, a ` [data-sly-test](../using/block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
+* ** [Block Statements](block-statements.md)** 
+  To conditionally display the **<h1>** element, a ` [data-sly-test](block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
 
-* ** [Expression Language](../using/expression-language.md)** 
+* ** [Expression Language](expression-language.md)** 
   HTL expressions are delimited by characters** ${** and **}**. At runtime, these expressions are evaluated and their value is injected into the outgoing HTML stream.
 
 The two pages linked above provide the detailed list of features available for syntax.
@@ -87,7 +87,7 @@ The two pages linked above provide the detailed list of features available for s
 >
 >The SLY element has been introduced with AEM 6.1, or HTL 1.1.
 >
->Prior to that, the ` [data-sly-unwrap](../using/block-statements.md#unwrap)` attribute had to be used instead.
+>Prior to that, the ` [data-sly-unwrap](block-statements.md#unwrap)` attribute had to be used instead.
 
 A central concept of HTL is to offer the possibility of reusing existing HTML elements to define block statements, which avoids the need of inserting additional delimiters to define where the statement starts and ends. This unobtrusive annotation of the markup to transform a static HTML into a functioning dynamic template offers the benefit of not breaking the validity of the HTML code, and therefore to still properly display, even as static files.
 
@@ -150,15 +150,15 @@ HTML comments cannot contain HTL comments and vice versa.
 
 In order to be able to make the best use of HTL, it is important to understand well the consequences of it being based on the HTML syntax.
 
-#### Element and Attribute Names {#element-and-attribute-names}
+### Element and Attribute Names {#element-and-attribute-names}
 
-Expressions can only be placed into HTML text or attribute values, but not within element names or attribute names, or it wouldn't be valid HTML anymore. In order to set element names dynamically, the ` [data-sly-element](../using/block-statements.md#element)` statement can be used on the desired elements, and to dynamically set attribute names, even setting multiple attributes at once, the ` [data-sly-attribute](../using/block-statements.md#attribute)` statement can be used.
+Expressions can only be placed into HTML text or attribute values, but not within element names or attribute names, or it wouldn't be valid HTML anymore. In order to set element names dynamically, the ` [data-sly-element](block-statements.md#element)` statement can be used on the desired elements, and to dynamically set attribute names, even setting multiple attributes at once, the ` [data-sly-attribute](block-statements.md#attribute)` statement can be used.
 
 ```xml
 <h1 data-sly-element="${myElementName}" data-sly-attribute="${myAttributeMap}">...</h1>
 ```
 
-#### Contexts Without Block Statements {#contexts-without-block-statements}
+### Contexts Without Block Statements {#contexts-without-block-statements}
 
 As HTL uses data attributes to define block statements, it is not possible to define such block statements inside of following contexts, and only expressions can be used there:
 
@@ -168,7 +168,7 @@ As HTL uses data attributes to define block statements, it is not possible to de
 
 The reason for it is that the content of these contexts is text and not HTML, and contained HTML elements would be considered as simple character data. So without real HTML elements, there also cannot be **`data-sly`** attributes executed.
 
-This may sound like a big restriction, however it is a desired one, because the HTML Template Language shouldn't be abused to generate output that isn't HTML. The [Use-API for Accessing Logic](../using/getting-started.md#UseAPIforAccessingLogic) section below introduces how additional logic can be called from the template, which can be used if it is needed to prepare complex output for these contexts. For instance, an easy way to send data from the back-end to a front-end script, is to have the component's logic to generate a JSON string, which can then be placed in a data attribute with a simple HTL expression.
+This may sound like a big restriction, however it is a desired one, because the HTML Template Language shouldn't be abused to generate output that isn't HTML. The [Use-API for Accessing Logic](getting-started.md#UseAPIforAccessingLogic) section below introduces how additional logic can be called from the template, which can be used if it is needed to prepare complex output for these contexts. For instance, an easy way to send data from the back-end to a front-end script, is to have the component's logic to generate a JSON string, which can then be placed in a data attribute with a simple HTL expression.
 
 Following example illustrates the behavior for HTML comments, but in script or style elements, the same behavior would be observed:
 
@@ -188,9 +188,9 @@ will output something like following HTML:
 -->
 ```
 
-#### Explicit Contexts Required {#explicit-contexts-required}
+### Explicit Contexts Required {#explicit-contexts-required}
 
-As explained in the [Automatic Context-Aware Escaping](../using/getting-started.md#AutomaticContextAwareEscaping) section below, one objective of HTL is to reduce the risks of introducing cross-site scripting (XSS) vulnerabilities by automatically applying context-aware escaping to all expressions. While HTL can automatically detect the context of expressions placed inside of HTML markup, it doesn't analyze the syntax of inline JavaScript or CSS, and therefore relies on the developer to specify explicitly what exact context has to be applied to such expressions.
+As explained in the [Automatic Context-Aware Escaping](getting-started.md#AutomaticContextAwareEscaping) section below, one objective of HTL is to reduce the risks of introducing cross-site scripting (XSS) vulnerabilities by automatically applying context-aware escaping to all expressions. While HTL can automatically detect the context of expressions placed inside of HTML markup, it doesn't analyze the syntax of inline JavaScript or CSS, and therefore relies on the developer to specify explicitly what exact context has to be applied to such expressions.
 
 Since not applying the correct escaping results in XSS vulnerabilities, HTL does therefore remove the output of all expressions that are in script and style contexts when the context has not been declared.
 
@@ -201,9 +201,9 @@ Here is an example of how to set the context for expressions placed inside scrip
 <style> a { font-family: "${myFont @ context='styleString'}"; } </style>
 ```
 
-For more details about how to control the escaping, refer to the [Expression Language Display Context](../using/expression-language.md#DisplayContext) section.
+For more details about how to control the escaping, refer to the [Expression Language Display Context](expression-language.md#DisplayContext) section.
 
-#### Lifting Limitations of Special Contexts {#lifting-limitations-of-special-contexts}
+### Lifting Limitations of Special Contexts {#lifting-limitations-of-special-contexts}
 
 In the special cases where it is needed to bypass the restrictions of the script, style and comment contexts, it is possible to isolate their content in a separate HTL file. Everything located in its own file will be interpreted by HTL as a normal HTML fragment, forgetting the limiting context from which it might have been included.
 
@@ -241,9 +241,9 @@ The example above uses server-side executed JavaScript to shorten the title to 1
 
 More about that in following sections:
 
-* The section on the [data-sly-use statement](../using/block-statements.md#use) explains everything that can be done with that statement.
-* The [Use-API page](../using/use-api.md) provides some information to help choose between writing the logic in Java or in JavaScript.
-* And to detail how to write the logic, the [JavaScript Use-API](../using/use-api-javascript.md) and the [Java Use-API](../using/use-api-java.md) pages should help.
+* The section on the [data-sly-use statement](block-statements.md#use) explains everything that can be done with that statement.
+* The [Use-API page](use-api.md) provides some information to help choose between writing the logic in Java or in JavaScript.
+* And to detail how to write the logic, the [JavaScript Use-API](use-api-javascript.md) and the [Java Use-API](use-api-java.md) pages should help.
 
 ### Automatic Context-Aware Escaping {#automatic-context-aware-escaping}
 
@@ -285,7 +285,7 @@ The initial example will then result in following output:
 
 Notice how the two attribute got escaped differently, because HTL knows that `href` and `src` attributes must be escaped for URI context. Also, if the URI started with "**javascript:**", the attribute would have been removed entirely, unless the context were explicitly changed to something else.
 
-For more details about how to control the escaping, refer to the [Expression Language Display Context](../using/expression-language.md#DisplayContext) section.
+For more details about how to control the escaping, refer to the [Expression Language Display Context](expression-language.md#DisplayContext) section.
 
 ### Automatic Removal of Empty Attributes {#automatic-removal-of-empty-attributes}
 
@@ -320,7 +320,7 @@ Here's an example of how a Boolean expression would allow to control a Boolean H
 <input type="checkbox" checked="${properties.isChecked}"/>
 ```
 
-For setting attributes, the [ `data-sly-attribute`](../using/block-statements.md#attribute) statement might also be useful.
+For setting attributes, the [ `data-sly-attribute`](block-statements.md#attribute) statement might also be useful.
 
 ## Common Patterns with HTL {#common-patterns-with-htl}
 
@@ -328,7 +328,7 @@ This section introduces a few common scenarios and how to best solve them with t
 
 ### Loading Client Libraries {#loading-client-libraries}
 
-In HTL, client libraries are loaded through a helper template provided by AEM, which can be accessed through ` [data-sly-use](../using/block-statements.md#use)`. Three templates are available in this file, which can be called through [ `data-sly-call`](../using/block-statements.md#templatecall):
+In HTL, client libraries are loaded through a helper template provided by AEM, which can be accessed through ` [data-sly-use](block-statements.md#use)`. Three templates are available in this file, which can be called through [ `data-sly-call`](block-statements.md#templatecall):
 
 * **`css`** - Loads only the CSS files of the referenced client libraries.
 * **`js`** - Loads only the JavaScript files of the referenced client libraries.
@@ -338,14 +338,14 @@ Each helper template expects a **`categories`** option for referencing the desir
 
 Here are two few short examples:
 
-#### Loading multiple client libraries fully at once {#loading-multiple-client-libraries-fully-at-once}
+### Loading multiple client libraries fully at once {#loading-multiple-client-libraries-fully-at-once}
 
 ```xml
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
      data-sly-call="${clientlib.all @ categories=['myCategory1', 'myCategory2']}"/>
 ```
 
-#### Referencing a client library in different sections of a page {#referencing-a-client-library-in-different-sections-of-a-page}
+### Referencing a client library in different sections of a page {#referencing-a-client-library-in-different-sections-of-a-page}
 
 ```xml
 <!doctype html>
@@ -363,7 +363,7 @@ Here are two few short examples:
 
 In the second example above, in case the HTML **`head`** and **`body`** elements are placed into different files, the **`clientlib.html`** template would then have to be loaded in each file that needs it.
 
-The section on the [template & call](../using/block-statements.md#templatecall) statements provides more details about how declaring and calling such templates work.
+The section on the [template & call](block-statements.md#templatecall) statements provides more details about how declaring and calling such templates work.
 
 ### Passing Data to the Client {#passing-data-to-the-client}
 
@@ -424,6 +424,5 @@ A more modern technique altogether, would however be to use the HTML **`template
 
 **Read next:**
 
-* [Expression Language](../using/expression-language.md) - to learn in detail what that can be done within HTL expressions.
-* [Block Statements](../using/block-statements.md) - to discover all the block statements available in HTL, and how to use them.
-
+* [Expression Language](expression-language.md) - to learn in detail what that can be done within HTL expressions.
+* [Block Statements](block-statements.md) - to discover all the block statements available in HTL, and how to use them.
