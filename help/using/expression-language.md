@@ -17,7 +17,7 @@ snippet: y
 
 # HTL Expression Language{#htl-expression-language}
 
-The HTML Template Language uses an expression language to access the data structures that provide the dynamic elements of the HTML output. These expressions are delimited by characters `${` and **`}`**. To avoid malformed HTML, expressions can only be used in attribute values, in element content, or in comments.
+The HTML Template Language uses an expression language to access the data structures that provide the dynamic elements of the HTML output. These expressions are delimited by characters `${` and `}`. To avoid malformed HTML, expressions can only be used in attribute values, in element content, or in comments.
 
 ```xml
 <!-- ${component.path} -->
@@ -32,13 +32,13 @@ Expressions can be escaped by prepended by a **`\`** character, for instance **`
 >
 >To try out the examples provided on this page, a live execution environment called the [Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) can be used.
 
-The expression syntax includes [variables](#Variables), [literals](#Literals), [operators](#Operators) and [options](#Options):
+The expression syntax includes [variables](#variables), [literals](#literals), [operators](#operators) and [options](#options):
 
 ## Variables {#variables}
 
 Variables are containers that store data values or objects. The names of variables are called identifiers.
 
-Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including **global.jsp**. The [Global Objects](global-objects.md) page provides the list of all objects provided access to by HTL.
+Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including `global.jsp`. The [Global Objects](global-objects.md) page provides the list of all objects provided access to by HTL.
 
 ### Property Access {#property-access}
 
@@ -49,7 +49,7 @@ ${currentPage['title']} or ${currentPage["title"]}`
 
 The simpler dot notation should be preferred for most cases, and the brackets notation should be used to access properties that contain invalid identifier characters, or to access properties dynamically. The following two chapters will provide details about these two cases.
 
-The accessed properties can be functions, however passing arguments is not supported, so only functions that don't expect arguments can accessed, like getters. This is a desired limitation, which is intended to reduce the amount of logic embedded into expressions. If needed, the ` [data-sly-use](block-statements.md#use)` statement can be used to pass parameters to the logic.
+The accessed properties can be functions, however passing arguments is not supported, so only functions that don't expect arguments can accessed, like getters. This is a desired limitation, which is intended to reduce the amount of logic embedded into expressions. If needed, the [`data-sly-use`](block-statements.md#use) statement can be used to pass parameters to the logic.
 
 Also shown in the example above is that Java getter functions, like `getTitle()`, can be accessed without prepending the **`get`**, and by lowering the case of the character that follows.
 
@@ -128,9 +128,8 @@ In addition to ordinary characters, following special characters can be used:
 * `\uXXXX` The Unicode character specified by the four hexadecimal digits XXXX.  
   Some useful unicode escape sequences are:
 
-    * **\u0022** for **"**
-    
-    * **\u0027** for **'**
+  * **\u0022** for **"**
+  * **\u0027** for **'**
 
 For characters not listed above, preceding a backslash caracter will display an error.
 
@@ -399,85 +398,22 @@ Escaping and XSS protection can also be turned off:
 <div>${myScript @ context='unsafe'}</div>
 ```
 
-#### Context Settings {#context-settings}
+### Context Settings {#context-settings}
 
-<table border="1" cellpadding="1" cellspacing="0" width="100%"> 
- <tbody> 
-  <tr> 
-   <th><strong>Context</strong></th> 
-   <th><strong>When to use</strong></th> 
-   <th><strong>What it does</strong></th> 
-  </tr> 
-  <tr> 
-   <td><strong><span class="code">text</span></strong></td> 
-   <td><i>Default for content inside elements</i></td> 
-   <td>Encodes all HTML special characters.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">html</span></td> 
-   <td>To safely output markup</td> 
-   <td>Filters HTML to meet the AntiSamy policy rules,<br /> removing what doesn't match the rules.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">attribute</span></td> 
-   <td><i>Default for attribute values</i></td> 
-   <td>Encodes all HTML special characters.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">uri</span></td> 
-   <td>To display links and paths<br /> <i>Default for <span class="code">href</span> and <span class="code">src</span> attribute values</i></td> 
-   <td>Validates URI for writing as an <span class="code">href</span> or <span class="code">src</span> attribute value,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">number</span></td> 
-   <td>To display numbers</td> 
-   <td>Validates URI for containing an integer,<br /> outputs zero if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">attributeName</span></td> 
-   <td><i>Default for <span class="code">data-sly-attribute</span> when setting attribute names</i></td> 
-   <td>Validates the attribute name,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">elementName</span></td> 
-   <td><i>Default for <span class="code">data-sly-element</span></i></td> 
-   <td>Validates the element name,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">scriptToken</span></td> 
-   <td>For JS identifiers, literal numbers, or literal strings</td> 
-   <td>Validates the JavaScript token,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">scriptString</span></td> 
-   <td>Within JS strings</td> 
-   <td>Encodes characters that would break out of the string.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">scriptComment</span></td> 
-   <td>Within JS comments</td> 
-   <td>Validates the JavaScript comment,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">styleToken</span></td> 
-   <td>For CSS identifiers, numbers, dimensions, strings, hex colours or functions.</td> 
-   <td>Validates the CSS token,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">styleString</span></td> 
-   <td>Within CSS strings</td> 
-   <td>Encodes characters that would break out of the string.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">styleComment</span></td> 
-   <td>Within CSS comments</td> 
-   <td>Validates the CSS comment,<br /> outputs nothing if validation fails.</td> 
-  </tr> 
-  <tr> 
-   <td><span class="code">unsafe</span></td> 
-   <td>Only if none of the above does the job</td> 
-   <td>Disables escaping and XSS protection completely.</td> 
-  </tr> 
- </tbody> 
-</table>
+|Context|When to use|What it does|
+|--- |--- |--- |
+|text|Default for content inside elements|Encodes all HTML special characters.|
+|html|To safely output markup|Filters HTML to meet the AntiSamy policy rules, removing what doesn't match the rules.|
+|attribute|Default for attribute values|Encodes all HTML special characters.|
+|uri|To display links and paths Default for href and src attribute values|Validates URI for writing as an href or src attribute value, outputs nothing if validation fails.|
+|number|To display numbers|Validates URI for containing an integer, outputs zero if validation fails.|
+|attributeName|Default for data-sly-attribute when setting attribute names|Validates the attribute name, outputs nothing if validation fails.|
+|elementName|Default for data-sly-element|Validates the element name, outputs nothing if validation fails.|
+|scriptToken|For JS identifiers, literal numbers, or literal strings|Validates the JavaScript token, outputs nothing if validation fails.|
+|scriptString|Within JS strings|Encodes characters that would break out of the string.|
+|scriptComment|Within JS comments|Validates the JavaScript comment, outputs nothing if validation fails.|
+|styleToken|For CSS identifiers, numbers, dimensions, strings, hex colours or functions.|Validates the CSS token, outputs nothing if validation fails.|
+|styleString|Within CSS strings|Encodes characters that would break out of the string.|
+|styleComment|Within CSS comments|Validates the CSS comment, outputs nothing if validation fails.|
+|unsafe|Only if none of the above does the job|Disables escaping and XSS protection completely.|
 

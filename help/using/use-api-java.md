@@ -21,8 +21,7 @@ The HTML Template Language (HTL) Java Use-API enables a HTL file to access helpe
 
 ## A Simple Example {#a-simple-example}
 
-We'll start with an HTL component that *does not* have a use-class. It consists of a single file,  
-**`/apps/my-example/components/info.html`**:
+We'll start with an HTL component that *does not* have a use-class. It consists of a single file, `/apps/my-example/components/info.html`
 
 ### `/apps/my-example/component/info/info.html` {#apps-my-example-component-info-info-html}
 
@@ -35,7 +34,7 @@ We'll start with an HTL component that *does not* have a use-class. It consists 
 
 We also add some content for this component to render at **`/content/my-example/`**:
 
-### http://localhost:4502/content/my-example.json {#http-localhost-content-my-example-json}
+### `http://localhost:4502/content/my-example.json` {#http-localhost-content-my-example-json}
 
 ```java
 {
@@ -47,7 +46,7 @@ We also add some content for this component to render at **`/content/my-example/
 
 When this content is accessed, the HTL file is executed. Within the HTL code we use the context object **`properties`**to access the current resource's `title` and `description` and display them. The output HTML will be:
 
-### view-source:http://localhost:4502/content/my-example.html {#view-source-http-localhost-content-my-example-html}
+### `view-source:http://localhost:4502/content/my-example.html` {#view-source-http-localhost-content-my-example-html}
 
 ```xml
 <div>
@@ -66,7 +65,7 @@ The **info** component as it stands does not need a use-class to perform its (ve
 
 For example, suppose that you want the `info` component to display the `title` and **`description`** properties of the resource, but all in lowercase. Since HTL does not have a method for lowercasing strings, you will need a use-class. We can do this by adding a Java use-class and changing the **`info.html`** as follows:
 
-### /apps/my-example/component/info/info.html {#apps-my-example-component-info-info-html-1}
+### `/apps/my-example/component/info/info.html` {#apps-my-example-component-info-info-html-1}
 
 ```xml
 <div data-sly-use.info="Info">
@@ -75,7 +74,7 @@ For example, suppose that you want the `info` component to display the `title` a
 </div>
 ```
 
-### /apps/my-example/component/info/Info.java {#apps-my-example-component-info-info-java}
+### `/apps/my-example/component/info/Info.java` {#apps-my-example-component-info-info-java}
 
 ```java
 package apps.my_example.components.info;
@@ -185,13 +184,13 @@ public class Info extends WCMUsePojo {
 
 ### Context {#context}
 
-Typically, the **` [activate](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#activate())`** method is used to precompute and store (in member variables) the values needed in your HTL code, based on the current context (the current request and resource, for example).
+Typically, the [`activate`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)` method is used to precompute and store (in member variables) the values needed in your HTL code, based on the current context (the current request and resource, for example).
 
-The `[WCMUsePojo](WCMUsePojo.md)` class provides access to the same set of context objects as are available within an HTL file (see [Global Objects](global-objects.md)).
+The [`WCMUsePojo`](WCMUsePojo.md) class provides access to the same set of context objects as are available within an HTL file (see [Global Objects](global-objects.md)).
 
 In a class that extends **`WCMUsePojo`**, context objects can be accessed *by name* using
 
-` [<T> T get(String name, Class<T> type)](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#get(java.lang.String, java.lang.Class))`
+[`<T> T get(String name, Class<T> type)`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)
 
 Alternatively, commonly used context objects can be accessed directly by the appropriate **convenience method**:
 
@@ -219,7 +218,7 @@ Once the use-class has initialized, the HTL file is run. During this stage HTL w
 
 To provide access to these values from within the HTL file you must define custom getter methods in the use-class **according to the following naming convention**:
 
-* A method of the form **`get*Xyz*`** will expose within the HTL file an object property called *** `xyz`***.
+* A method of the form **`get*Xyz*`** will expose within the HTL file an object property called ***xyz***.
 
 For example, in the following example, the methods **`getTitle`** and **`getDescription`** result in the object properties **`title`** and **`description` **becoming accessible within the context of the HTL file:
 

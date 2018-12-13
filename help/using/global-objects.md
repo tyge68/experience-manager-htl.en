@@ -17,32 +17,18 @@ snippet: y
 
 # HTL Global Objects{#htl-global-objects}
 
-Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including **global.jsp**. These objects are in addition to any that may be introduced through the [Use-API](use-api.md).
+Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including `global.jsp`. These objects are in addition to any that may be introduced through the [Use-API](use-api.md).
 
 ## Enumerable Objects {#enumerable-objects}
 
-These objects provide convenient access to commonly used information. Their content can be accessed with the dot notation, and they can be iterated-through using `data-sly-list` or **`data-sly-repeat`**.
+These objects provide convenient access to commonly used information. Their content can be accessed with the dot notation, and they can be iterated-through using `data-sly-list` or `data-sly-repeat`.
 
-<table border="1" cellpadding="1" cellspacing="0" width="100%"> 
- <tbody>
-  <tr>
-   <th><strong>Variable Name</strong></th> 
-   <th><strong>Description</strong></th> 
-  </tr>
-  <tr>
-   <td><span class="code">properties</span></td> 
-   <td>List of properties of the current <span class="code">Resource</span>.<br /> Backed by <span class="code"><a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
-  </tr>
-  <tr>
-   <td><span class="code">pageProperties</span></td> 
-   <td>List of page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
-  </tr>
-  <tr>
-   <td><span class="code">inheritedPageProperties</span></td> 
-   <td>List of inherited page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
-  </tr>
- </tbody>
-</table>
+|Variable Name|Description|
+|--- |--- |
+|properties|List of properties of the current Resource. Backed by [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html)|
+|pageProperties|List of page properties of the current Page. Backed by [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.hmtl)|
+|inheritedPageProperties|List of inherited page properties of the current Page. Backed by [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html)|
+
 
 ## Java-backed Objects {#java-backed-objects}
 
@@ -122,6 +108,4 @@ Comment Type: draft
  <li>setTimeout: JS Function</li> 
  <li>use: JS Function</li> 
 </ul>
-
- -->
-
+-->

@@ -70,10 +70,10 @@ Here's a first example, which could be contained as is in a **`template.html`** 
 Two different kind of syntaxes can be distinguished:
 
 * **[Block Statements](block-statements.md)** 
-  To conditionally display the **<h1>** element, a ` [data-sly-test](block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
+  To conditionally display the **&lt;h1&gt;** element, a ` [data-sly-test](block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
 
 * **[Expression Language](expression-language.md)** 
-  HTL expressions are delimited by characters** ${** and **}**. At runtime, these expressions are evaluated and their value is injected into the outgoing HTML stream.
+  HTL expressions are delimited by characters `${` and `}`. At runtime, these expressions are evaluated and their value is injected into the outgoing HTML stream.
 
 The two pages linked above provide the detailed list of features available for syntax.
 
@@ -279,7 +279,7 @@ The initial example will then result in following output:
 </p>
 ```
 
-Notice how the two attribute got escaped differently, because HTL knows that `href` and `src` attributes must be escaped for URI context. Also, if the URI started with "**javascript:**", the attribute would have been removed entirely, unless the context were explicitly changed to something else.
+Notice how the two attribute got escaped differently, because HTL knows that `href` and `src` attributes must be escaped for URI context. Also, if the URI started with **`javascript:`**, the attribute would have been removed entirely, unless the context were explicitly changed to something else.
 
 For more details about how to control the escaping, refer to the [Expression Language Display Context](expression-language.md#display-context) section.
 
