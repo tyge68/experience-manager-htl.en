@@ -49,7 +49,8 @@ Before getting started with the HTML Template Language, let's start with answeri
 **No, but as shown in the [Loading Client Libraries](getting-started.md#loading-client-libraries) section, the [template & call](block-statements.md#templatecall) statements offer a similar pattern.
 
 **Can the HTL features be extended on an AEM project?** 
-No, they cannot. HTL has powerful extension mechanisms for reuse of logic (the [Use-API](#use-api-for-accessing-logic)) and of markup (the [template & call](block-statements.md#templatecall) statements), which can be used to modularize the code of projects.
+**No, but as shown in the [Loading Client Libraries](getting-started.md#loading-client-libraries) section, the [template & call](block-statements.md#templatecall) statements offer a similar pattern.
+No, they cannot. HTL has powerful extension mechanisms for reuse of logic (the [Use-API](#use-api-for-accessing-logic)) and of markup (the [template & call](block-statements.md#template-call) statements), which can be used to modularize the code of projects.
 
 **What are the main benefits of HTL over JSP?  
 **Security and project efficiency are the main benefits, which are detailed on the [Overview](overview.md).
@@ -168,7 +169,7 @@ As HTL uses data attributes to define block statements, it is not possible to de
 
 The reason for it is that the content of these contexts is text and not HTML, and contained HTML elements would be considered as simple character data. So without real HTML elements, there also cannot be **`data-sly`** attributes executed.
 
-This may sound like a big restriction, however it is a desired one, because the HTML Template Language shouldn't be abused to generate output that isn't HTML. The [Use-API for Accessing Logic](#use-api-for-accessing-logic) section below introduces how additional logic can be called from the template, which can be used if it is needed to prepare complex output for these contexts. For instance, an easy way to send data from the back-end to a front-end script, is to have the component's logic to generate a JSON string, which can then be placed in a data attribute with a simple HTL expression.
+This may sound like a big restriction, however it is a desired one, because the HTML Template Language shouldn't be abused to generate output that isn't HTML. The [Use-API for Accessing Logic](getting-started.md#use-api-for-accessing-logic) section below introduces how additional logic can be called from the template, which can be used if it is needed to prepare complex output for these contexts. For instance, an easy way to send data from the back-end to a front-end script, is to have the component's logic to generate a JSON string, which can then be placed in a data attribute with a simple HTL expression.
 
 Following example illustrates the behavior for HTML comments, but in script or style elements, the same behavior would be observed:
 
@@ -207,7 +208,7 @@ For more details about how to control the escaping, refer to the [Expression Lan
 
 In the special cases where it is needed to bypass the restrictions of the script, style and comment contexts, it is possible to isolate their content in a separate HTL file. Everything located in its own file will be interpreted by HTL as a normal HTML fragment, forgetting the limiting context from which it might have been included.
 
-See the [Working with Client-Side Templates](#WorkingwithClientSideTemplates) section further down for an example.
+See the [Working with Client-Side Templates](getting-started.md#working-with-client-side-templates) section further down for an example.
 
 >[!CAUTION]
 >
@@ -399,7 +400,7 @@ for (var i = 0; i < elements.length; i++) {
 
 ### Working with Client-Side Templates {#working-with-client-side-templates}
 
-One special case, where the technique explained in the section [Lifting Limitations of Special Contexts](#LiftingLimitationsofSpecialContexts) can legitimately be used, is to write client-side templates (like Handlebars for instance) that are located within **script** elements. The reason this technique can safely be used in that case, is because the **script** element then doesn't contain JavaScript as assumed, but further HTML elements. Here's an example of how that would work:
+One special case, where the technique explained in the section [Lifting Limitations of Special Contexts](getting-started.md#lifting-limitations-of-special-contexts) can legitimately be used, is to write client-side templates (like Handlebars for instance) that are located within **script** elements. The reason this technique can safely be used in that case, is because the **script** element then doesn't contain JavaScript as assumed, but further HTML elements. Here's an example of how that would work:
 
 ```xml
 <!--/* template.html file: */-->
