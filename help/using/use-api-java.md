@@ -110,7 +110,7 @@ The Java use-class can be installed in two ways: **local **or **bundle**. **This
 
 In a local install, the Java source file is placed alongside the HTL file, in the same repository folder. The source is automatically compiled on demand. No separate compilation or packaging step is required.
 
-In a bundle install, the Java class must be compiled and deployed within an OSGi bundle using the standard AEM bundle deployment mechanism (see [Bundled Java Class](#BundledJavaClass)).
+In a bundle install, the Java class must be compiled and deployed within an OSGi bundle using the standard AEM bundle deployment mechanism (see [Bundled Java Class](#bundled-java-class)).
 
 >[!NOTE]
 >
@@ -185,33 +185,33 @@ public class Info extends WCMUsePojo {
 
 ### Context {#context}
 
-Typically, the **` [activate](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#activate())`** method is used to precompute and store (in member variables) the values needed in your HTL code, based on the current context (the current request and resource, for example).
+Typically, the **` [activate](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#activate())`** method is used to precompute and store (in member variables) the values needed in your HTL code, based on the current context (the current request and resource, for example).
 
 The `[WCMUsePojo](WCMUsePojo.md)` class provides access to the same set of context objects as are available within an HTL file (see [Global Objects](global-objects.md)).
 
 In a class that extends **`WCMUsePojo`**, context objects can be accessed *by name* using
 
-` [<T> T get(String name, Class<T> type)](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#get(java.lang.String, java.lang.Class))`
+` [<T> T get(String name, Class<T> type)](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#get(java.lang.String, java.lang.Class))`
 
 Alternatively, commonly used context objects can be accessed directly by the appropriate **convenience method**:
 
 |||
 |---|---|
-| [PageManager](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager)                              | [getPageManager()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getPageManager())                 |
-| [Page](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page)                                            | [getCurrentPage()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getCurrentPage())                 |
-| [Page](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page)                                            | [getResourcePage()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getResourcePage())               |
-| [ValueMap](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap)                         | [getPageProperties()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getPageProperties())           |
-| [ValueMap](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap)                         | [getProperties()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getProperties())                   |
-| [Designer](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer)                           | [getDesigner()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getDesigner())                       |
-| [Design](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Design)                               | [getCurrentDesign()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getCurrentDesign())             |
-| [Style](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Style)                                 | [getCurrentStyle()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getCurrentStyle())               |
-| [Component](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component)                       | [getComponent()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getComponent())                    |
-| [ValueMap](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap)                         | [getInheritedProperties()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getInheritedProperties()) |
-| [Resource](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource)                         | [getResource()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getResource())                       |
-| [ResourceResolver](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver)         | [getResourceResolver()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getResourceResolver())       |
-| [SlingHttpServletRequest](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest)    | [getRequest()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getRequest())                         |
-| [SlingHttpServletResponse](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletResponse)  | [getResponse()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getResponse())                       |
-| [SlingScriptHelper](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/scripting/SlingScriptHelper)      | [getSlingScriptHelper()](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getSlingScriptHelper())     |
+| [PageManager](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)                              | [getPageManager()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getPageManager())                 |
+| [Page](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)                                            | [getCurrentPage()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getCurrentPage())                 |
+| [Page](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)                                            | [getResourcePage()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getResourcePage())               |
+| [ValueMap](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html)                         | [getPageProperties()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getPageProperties())           |
+| [ValueMap](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html)                         | [getProperties()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getProperties())                   |
+| [Designer](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer.html)                           | [getDesigner()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getDesigner())                       |
+| [Design](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Design.html)                               | [getCurrentDesign()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getCurrentDesign())             |
+| [Style](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Style.html)                                 | [getCurrentStyle()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getCurrentStyle())               |
+| [Component](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html)                       | [getComponent()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getComponent())                    |
+| [ValueMap](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html)                         | [getInheritedProperties()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#getInheritedProperties.html()) |
+| [Resource](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html)                         | [getResource()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getResource())                       |
+| [ResourceResolver](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html)         | [getResourceResolver()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getResourceResolver())       |
+| [SlingHttpServletRequest](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html)    | [getRequest()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getRequest())                         |
+| [SlingHttpServletResponse](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletResponse.html)  | [getResponse()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getResponse())                       |
+| [SlingScriptHelper](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/scripting/SlingScriptHelper.html)      | [getSlingScriptHelper()](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html#getSlingScriptHelper())     |
 
 ### Getter methods {#getter-methods}
 
@@ -351,7 +351,7 @@ public class Info extends WCMUsePojo {
 
 The parameter is accessed through the **`WCMUsePojo`** method
 
-** [ `<T> T get(String paramName, Class<T> type)`](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse#get(java.lang.String, java.lang.Class))**
+** [ `<T> T get(String paramName, Class<T> type)`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)**
 
 In our case, the statement
 
@@ -494,7 +494,7 @@ The system processes the statement as follows:
 (3)
 
 * Within HTL, bind the newly adapted or created object to the name `*localName*`.
-* If `*UseClass*` implements ** [ `io.sightly.java.api.Use`](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use) **then call the `init` method, passing the current execution context (in the form of a `javax.scripting.Bindings` object).
+* If `*UseClass*` implements ** [ `io.sightly.java.api.Use`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html) **then call the `init` method, passing the current execution context (in the form of a `javax.scripting.Bindings` object).
 
 (4)
 
@@ -512,11 +512,11 @@ A few significant points about the above description:
 
 ### Directly Implement Interface Use {#directly-implement-interface-use}
 
-While the most common way to create a use-class is to extend **`WCMUsePojo`**, it is also possible to directly implement the `[io.sightly.java.api.Use](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use)`interface itself.
+While the most common way to create a use-class is to extend **`WCMUsePojo`**, it is also possible to directly implement the `[io.sightly.java.api.Use](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html)`interface itself.
 
 The `Use` interface defines only one method:
 
-`[public void init(javax.script.Bindings bindings)](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use#init(javax.script.Bindings))`
+`[public void init(javax.script.Bindings bindings)](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use#init(javax.script.Bindings))`
 
 The **`init`** method will be called on initialization of the class with a **`Bindings`** object that holds all the context objects and any parameters passed into the use-class.
 
@@ -602,7 +602,7 @@ You know that a **`dam:Asset`** node has a structure like this:
 
 Here we show the asset (a JPEG image) that comes with a default install of AEM as part of the example project geometrixx. The asset is called **`jane_doe.jpg`** and its mimetype is **`image/jpeg`**.
 
-To access the asset from within HTL, you can declare ` [com.day.cq.dam.api.Asset](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/Asset)` as the class in the **`data-sly-use`** statement: and then use a get method of **`Asset`** to retrieve the desired information. For example:
+To access the asset from within HTL, you can declare ` [com.day.cq.dam.api.Asset](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/Asset.html)` as the class in the **`data-sly-use`** statement: and then use a get method of **`Asset`** to retrieve the desired information. For example:
 
 ### `mimetype.html` {#mimetype-html}
 
@@ -616,6 +616,6 @@ The `data-sly-use` statement directs HTL to adapt the current **`Resource`** to 
 
 ### Adaptable from Request {#adaptable-from-request}
 
-It is also possible to emply as a use-class any class that is adaptable from **` [org.apache.sling.api.SlingHttpServletRequest](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest)`**
+It is also possible to emply as a use-class any class that is adaptable from **` [org.apache.sling.api.SlingHttpServletRequest](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html)`**
 
-As with the above case of a use-class adaptable from `Resource`, a use-class adaptable from ** [ `SlingHttpServletRequest`](/content/help/en/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest) **can be specified in the **`data-sly-use`** statement. Upon execution the current request will be adapted to the class given and the resulting object will be made available within HTL.
+As with the above case of a use-class adaptable from `Resource`, a use-class adaptable from ** [ `SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) **can be specified in the **`data-sly-use`** statement. Upon execution the current request will be adapted to the class given and the resulting object will be made available within HTL.

@@ -21,17 +21,17 @@ The AEM Community has generated a series of articles, videos and webinars relate
 
 Here is a listing of the available content:
 
-1. [Creating an AEM HTML Template Language component that uses the WCMUsePojo class](/content/help/en/experience-manager/using/first_htl_WCMUsePojo)  
+1. [Creating an AEM HTML Template Language component that uses the WCMUsePojo class](https://helpx.adobe.com/experience-manager/using/first_htl_WCMUsePojo.html)  
 
-1. [Creating an AEM Headline component](/content/help/en/experience-manager/using/aem_headline)
-1. [Creating an AEM movie component](/content/help/en/experience-manager/using/movie)
-1. [Developing HTML Template Language Components that search for AEM Content Tags](/content/help/en/experience-manager/using/tagmanager-api-htl)
-1. [Creating a HTML Template Language component that uses the AEM QueryBuilder API](/content/help/en/experience-manager/using/htl_querybuilder)
-1. [Creating a HTML Template Language and Sling Model DOM parser component](/content/help/en/experience-manager/using/domparser)
-1. [Creating an AEM HTML Template Language component that uses a Multifield](/content/help/en/experience-manager/using/mf_htl61)
-1. [Creating an AEM HTML Template Language Component that displays data from a SOAP Web Service](/content/help/en/experience-manager/using/webservice_htl)
-1. [Creating an AEM HTML Template Language Component that posts data using AJAX](/content/help/en/experience-manager/using/htl_ajax)
-1. [Creating an AEM HTL component that uses JavaScrip](/content/help/en/experience-manager/using/htl_js)t
+1. [Creating an AEM Headline component](https://helpx.adobe.com/experience-manager/using/aem_headline.html)
+1. [Creating an AEM movie component](https://helpx.adobe.com/experience-manager/using/movie.html)
+1. [Developing HTML Template Language Components that search for AEM Content Tags](https://helpx.adobe.com/experience-manager/using/tagmanager-api-htl.html)
+1. [Creating a HTML Template Language component that uses the AEM QueryBuilder API](https://helpx.adobe.com/experience-manager/using/htl_querybuilder.html)
+1. [Creating a HTML Template Language and Sling Model DOM parser component](https://helpx.adobe.com/experience-manager/using/domparser.html)
+1. [Creating an AEM HTML Template Language component that uses a Multifield](https://helpx.adobe.com/experience-manager/using/mf_htl61.html)
+1. [Creating an AEM HTML Template Language Component that displays data from a SOAP Web Service](https://helpx.adobe.com/experience-manager/using/webservice_htl.html)
+1. [Creating an AEM HTML Template Language Component that posts data using AJAX](https://helpx.adobe.com/experience-manager/using/htl_ajax.html)
+1. [Creating an AEM HTL component that uses JavaScrip](https://helpx.adobe.com/experience-manager/using/htl_js.html)
 
 Ask the Expert sessions:
 

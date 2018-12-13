@@ -31,15 +31,15 @@ These objects provide convenient access to commonly used information. Their cont
   </tr>
   <tr>
    <td><span class="code">properties</span></td> 
-   <td>List of properties of the current <span class="code">Resource</span>.<br /> Backed by <span class="code"><a href="/content/help/en/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
+   <td>List of properties of the current <span class="code">Resource</span>.<br /> Backed by <span class="code"><a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
   </tr>
   <tr>
    <td><span class="code">pageProperties</span></td> 
-   <td>List of page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="/content/help/en/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
+   <td>List of page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
   </tr>
   <tr>
    <td><span class="code">inheritedPageProperties</span></td> 
-   <td>List of inherited page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="/content/help/en/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
+   <td>List of inherited page properties of the current <span class="code">Page</span>.<br /> Backed by <span class="code"><a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap">org.apache.sling.api.resource.ValueMap</a></span></td> 
   </tr>
  </tbody>
 </table>

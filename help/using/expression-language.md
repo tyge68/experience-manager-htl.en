@@ -323,7 +323,7 @@ ${'Page {0} of {1}' @ format=[current, total]}
 
 ### Internationalization {#internationalization}
 
-Translates the string to the language of the current *source* (see below), using the current [dictionary](/content/help/en/experience-manager/6-3/sites/developing/using/i18n-translator). If no translation is found, the original string is used.
+Translates the string to the language of the current *source* (see below), using the current [dictionary](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/i18n-translator). If no translation is found, the original string is used.
 
 ```xml
 ${'Page' @ i18n}
