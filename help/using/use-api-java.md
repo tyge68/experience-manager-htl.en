@@ -105,7 +105,7 @@ In the following sections we walk through the different parts of the code.
 
 ### Local vs Bundle Java Class {#local-vs-bundle-java-class}
 
-The Java use-class can be installed in two ways: **local **or **bundle**. **This example uses a local install.**
+The Java use-class can be installed in two ways: **local** or **bundle**. *This example uses a local install.*
 
 In a local install, the Java source file is placed alongside the HTL file, in the same repository folder. The source is automatically compiled on demand. No separate compilation or packaging step is required.
 
@@ -141,9 +141,9 @@ public class Info extends WCMUsePojo {
 >
 >Using hyphens in the names of repository items is a recommended practice in AEM developement. However, hyphens are illegal within Java package names. For this reason, **all hyphens in the repository path must be converted to underscores in the package name**.
 
-### Extending WCMUsePojo {#extending-wcmusepojo}
+### Extending `WCMUsePojo` {#extending-wcmusepojo}
 
-While there are number of ways of incorporating a Java class with HTL (see Alternatives to WCMUsePojo), the simplest is to extend the WCMUsePojo class:
+While there are number of ways of incorporating a Java class with HTL (see Alternatives to `WCMUsePojo`), the simplest is to extend the `WCMUsePojo` class:
 
 #### `/apps/my-example/component/info/Info.java` {#apps-my-example-component-info-info-java-2}
 
@@ -299,7 +299,7 @@ In this section we'll introdce some further features that go beyond the simple e
 
 * Passing parameters to a use-class.
 * Bundled Java use-class.
-* Alternatives to **`WCMUsePojo`**
+* Alternatives to `WCMUsePojo`
 
 ### Passing Parameters {#passing-parameters}
 
@@ -348,7 +348,7 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-The parameter is accessed through the **`WCMUsePojo`** method
+The parameter is accessed through the `WCMUsePojo` method
 
 ** [ `<T> T get(String paramName, Class<T> type)`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)**
 
@@ -409,7 +409,7 @@ The **`Info`** class is employed as before, calling its getter methods **`getLow
 
 Then we perform a **`data-sly-call`** to the template **`extra`** and pass it the value `properties.description` as the parameter **`text`**.
 
-The Java use-class **`Info.java`** is changed to handle the new text parameter:
+The Java use-class `Info.java` is changed to handle the new text parameter:
 
 ### `/apps/my-example/component/info/ExtraHelper.java` {#apps-my-example-component-info-extrahelper-java}
 
@@ -465,9 +465,9 @@ and, the `data-sly-use` statement must reference the *fully qualified class name
 </div>
 ```
 
-### Alternatives to WCMUsePojo {#alternatives-to-wcmusepojo}
+### Alternatives to `WCMUsePojo` {#alternatives-to-wcmusepojo}
 
-The most common way to create a Java use-class is to extend **`WCMUsePojo`**. However, there are a number of other options. To understand these variants it helps to understand how the HTL `data-sly-use` statement works under the hood.
+The most common way to create a Java use-class is to extend `WCMUsePojo`. However, there are a number of other options. To understand these variants it helps to understand how the HTL `data-sly-use` statement works under the hood.
 
 Suppose you have the following `data-sly-use` statement:
 
@@ -503,15 +503,15 @@ The system processes the statement as follows:
 
 A few significant points about the above description:
 
-* Any class that is adaptable from **`Resource`**, adaptable from `Request`, or that has a zero-argument constructor can be a use-class. The class does not have to extend extend **`WCMUsePojo`** or even implement `Use`.
+* Any class that is adaptable from `Resource`, adaptable from `Request`, or that has a zero-argument constructor can be a use-class. The class does not have to extend extend `WCMUsePojo` or even implement `Use`.
 
 * However, if the use-class *does* implement `Use`, then its **`init`** method will automatically be called with the current context, allowing you to place initialization code there that depends on that context.
 
-* A use-class that extends **`WCMUsePojo`** is just a special case of implementing **`Use`**. It provides the convenience context methods and its **`activate`** method is automatically called from `Use.init`.
+* A use-class that extends `WCMUsePojo` is just a special case of implementing **`Use`**. It provides the convenience context methods and its **`activate`** method is automatically called from `Use.init`.
 
 ### Directly Implement Interface Use {#directly-implement-interface-use}
 
-While the most common way to create a use-class is to extend **`WCMUsePojo`**, it is also possible to directly implement the `[io.sightly.java.api.Use](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html)`interface itself.
+While the most common way to create a use-class is to extend `WCMUsePojo`, it is also possible to directly implement the `[io.sightly.java.api.Use](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html)`interface itself.
 
 The `Use` interface defines only one method:
 
@@ -519,7 +519,7 @@ The `Use` interface defines only one method:
 
 The **`init`** method will be called on initialization of the class with a **`Bindings`** object that holds all the context objects and any parameters passed into the use-class.
 
-All additional functionality (such as the equivalent of **`WCMUsePojo.getProperties()`**) must be implmented explicitly using the ` [javax.script.Bindings](http://docs.oracle.com/javase/7/docs/api/javax/script/Bindings.html)` object. For example:
+All additional functionality (such as the equivalent of `WCMUsePojo.getProperties()`) must be implmented explicitly using the ` [javax.script.Bindings](http://docs.oracle.com/javase/7/docs/api/javax/script/Bindings.html)` object. For example:
 
 ### `Info.java` {#info-java}
 
@@ -617,4 +617,4 @@ The `data-sly-use` statement directs HTL to adapt the current **`Resource`** to 
 
 It is also possible to emply as a use-class any class that is adaptable from **` [org.apache.sling.api.SlingHttpServletRequest](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html)`**
 
-As with the above case of a use-class adaptable from `Resource`, a use-class adaptable from ** [ `SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) **can be specified in the **`data-sly-use`** statement. Upon execution the current request will be adapted to the class given and the resulting object will be made available within HTL.
+As with the above case of a use-class adaptable from `Resource`, a use-class adaptable from [`SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) can be specified in the `data-sly-use` statement. Upon execution the current request will be adapted to the class given and the resulting object will be made available within HTL.
