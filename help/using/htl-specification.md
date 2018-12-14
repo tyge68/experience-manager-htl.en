@@ -1,8 +1,8 @@
 ---
 title: The HTL Specification
 seo-title: The HTL Specification
-description: null
-seo-description: Information about the HTL Specification
+description: The Adobe HTL specification
+seo-description: Information about the Adobe AEM HTL Specification
 uuid: 507d9566-93ae-4274-b379-65ccebcd6bb2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
@@ -18,5 +18,6 @@ internal: n
 snippet: y
 ---
 
-# The HTL Specification{#the-htl-specification}
+# The HTL Specification
 
+The full HTL Specification is detailed in our [Open Source Git repository](https://github.com/adobe/htl-spec)
