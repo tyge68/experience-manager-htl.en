@@ -15,7 +15,7 @@ internal: n
 snippet: y
 ---
 
-# HTL JavaScript Use-API{#htl-javascript-use-api}
+# HTL JavaScript Use-API {#htl-javascript-use-api}
 
 The HTML Template Langugae (HTL) JavaScript Use-API enables a HTL file to access helper code written in JavaScript. This allows all complex business logic to be encapsulated in the JavaScript code, while the HTL code deals only with direct markup production.
 

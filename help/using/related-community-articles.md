@@ -15,7 +15,7 @@ internal: n
 snippet: y
 ---
 
-# Related Community Articles{#related-community-articles}
+# Related Community Articles {#related-community-articles}
 
 The AEM Community has generated a series of articles, videos and webinars related to using HTL.
 
