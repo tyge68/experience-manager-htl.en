@@ -15,7 +15,7 @@ internal: n
 snippet: y
 ---
 
-# Overview{#overview}
+# Overview {#overview}
 
 The purpose of HTML Template Language (HTL), supported by Adobe Experience Manager (AEM), is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
 

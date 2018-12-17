@@ -15,7 +15,7 @@ internal: n
 snippet: y
 ---
 
-# HTL Use-API{#htl-use-api}
+# HTL Use-API {#htl-use-api}
 
 The following table gives an overview of the pros and cons of each API.
 

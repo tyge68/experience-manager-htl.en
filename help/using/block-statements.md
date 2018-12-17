@@ -276,7 +276,7 @@ Here is a simple loop:
 
 The following default variables are available within the scope of the list:
 
-`item`: The current item in the iteration.
+**`item`**: The current item in the iteration.
 
 **`itemList`**: Object holding the following properties:
 

@@ -8,9 +8,8 @@ user-guide: Experience Manager Core Components Help
 # Experience Manager Core Components Help {#experience-manager-core-components}
 
 + [Overview](overview.md)
-+ Introduction to HTL{#introduction-to-htl}
++ Getting Started{#getting-started-to-htl}
   + [What is HTL?](update.md)
-+ Getting started{#getting-started}
   + [Getting Started with HTL](getting-started.md)
   + [The HTL Specification](htl-specification.md)
 + HTML Template Language{#html-template-language}
@@ -24,5 +23,5 @@ user-guide: Experience Manager Core Components Help
   + [HTL Expression Language](expression-language.md)
   + [Code Samples](code-samples.md)
   + [Standardization](standardization.md)
-+ More Resources{#more-resources}
++ Related Resources{#related-resources}
   + [Related Community Articles](related-community-articles.md)
