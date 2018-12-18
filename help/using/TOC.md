@@ -5,7 +5,7 @@ archtype: admin
 user-guide: Experience Manager HTL Help
 ---
 
-# Experience Manager HTL Help {#experience-manager-core-components}
+# Experience Manager HTL Help {#aem-htl-help}
 
 + [Overview](overview.md)
 + Getting Started{#getting-started-to-htl}
