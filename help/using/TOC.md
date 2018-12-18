@@ -1,11 +1,11 @@
 ---
 cloud: experience-cloud
-product: adobe experience manager core components
+product: adobe experience manager htl
 archtype: admin
-user-guide: Experience Manager Core Components Help
+user-guide: Experience Manager HTL Help
 ---
 
-# Experience Manager Core Components Help {#experience-manager-core-components}
+# Experience Manager HTL Help {#experience-manager-core-components}
 
 + [Overview](overview.md)
 + Getting Started{#getting-started-to-htl}
