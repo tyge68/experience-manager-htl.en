@@ -1,7 +1,7 @@
 ---
 title: Developer Tools
 seo-title: Developer Tools
-description: null
+description: A list of HTL development tools
 seo-description: A list of HTL development tools
 uuid: cfedb0d3-016e-4eca-965d-b5c2d217e919
 contentOwner: User
@@ -22,9 +22,9 @@ The following developer tools are available for HTL:
 * [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)  
   A live execution environment for playing with the language, great for learning.
 
-* [AEM Brackets extension](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/aem-brackets)  
+* [AEM Brackets extension](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/aem-brackets.html)  
   An easy tool for front-end developers to work on AEM components.
 
-* [AEM Eclipse extension](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/aem-eclipse)  
+* [AEM Eclipse extension](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/aem-eclipse.html)  
   A tool for back-end developers to create AEM projects and easily edit them.
 
