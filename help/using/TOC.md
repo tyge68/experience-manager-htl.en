@@ -5,14 +5,14 @@ archtype: admin
 user-guide: Experience Manager HTL Help
 ---
 
-# Experience Manager HTL Help {#aem-htl-help}
+# Experience Manager HTL Help {#using}
 
 + [Overview](overview.md)
-+ Getting Started{#getting-started-to-htl}
++ Getting Started{#getting-started}
   + [What is HTL?](update.md)
   + [Getting Started with HTL](getting-started.md)
   + [The HTL Specification](htl-specification.md)
-+ HTML Template Language{#html-template-language}
++ HTML Template Language{#htl}
   + [HTL Global Objects](global-objects.md)
   + [HTL Java Use-API](use-api-java.md)
   + [HTL JavaScript Use-API](use-api-javascript.md)
@@ -23,5 +23,5 @@ user-guide: Experience Manager HTL Help
   + [HTL Expression Language](expression-language.md)
   + [Code Samples](code-samples.md)
   + [Standardization](standardization.md)
-+ Related Resources{#related-resources}
++ Related Resources{#resources}
   + [Related Community Articles](related-community-articles.md)
