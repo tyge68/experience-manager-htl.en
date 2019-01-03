@@ -184,7 +184,7 @@ public class Info extends WCMUsePojo {
 
 ### Context {#context}
 
-Typically, the [`activate`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)` method is used to precompute and store (in member variables) the values needed in your HTL code, based on the current context (the current request and resource, for example).
+Typically, the [activate](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html) method is used to precompute and store (in member variables) the values needed in your HTL code, based on the current context (the current request and resource, for example).
 
 The `WCMUsePojo` class provides access to the same set of context objects as are available within an HTL file (see [Global Objects](global-objects.md)).
 
@@ -218,9 +218,9 @@ Once the use-class has initialized, the HTL file is run. During this stage HTL w
 
 To provide access to these values from within the HTL file you must define custom getter methods in the use-class **according to the following naming convention**:
 
-* A method of the form **`get*Xyz*`** will expose within the HTL file an object property called ***xyz***.
+* A method of the form **`getXyz`** will expose within the HTL file an object property called ***xyz***.
 
-For example, in the following example, the methods **`getTitle`** and **`getDescription`** result in the object properties **`title`** and **`description` **becoming accessible within the context of the HTL file:
+For example, in the following example, the methods **`getTitle`** and **`getDescription`** result in the object properties **`title`** and **`description`** becoming accessible within the context of the HTL file:
 
 ### `/apps/my-example/component/info/Info.java` {#apps-my-example-component-info-info-java-4}
 
@@ -282,7 +282,7 @@ The identifier `info` is then used to access the object properties **`title`** a
 
 ### Output {#output}
 
-Now, when we access**`/content/my-example.html`** it will return the following HTML:
+Now, when we access **`/content/my-example.html`** it will return the following HTML:
 
 ### `view-source:http://localhost:4502/content/my-example.html` {#view-source-http-localhost-content-my-example-html-1}
 
@@ -350,7 +350,7 @@ public class Info extends WCMUsePojo {
 
 The parameter is accessed through the `WCMUsePojo` method
 
-** [ `<T> T get(String paramName, Class<T> type)`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)**
+[ `<T> T get(String paramName, Class<T> type)`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/com/adobe/cq/sightly/WCMUse.html)
 
 In our case, the statement
 
@@ -471,35 +471,35 @@ The most common way to create a Java use-class is to extend `WCMUsePojo`. Howeve
 
 Suppose you have the following `data-sly-use` statement:
 
-**`<div data-sly-use.`** `*localName*`**`="`** `*UseClass*`**`">`**
+**`<div data-sly-use.`** `localName`**`="`** `UseClass`**`">`**
 
 The system processes the statement as follows:
 
 (1)
 
-* If there exists a local file * `UseClass`***`.java`* ***in the same directory as the HTL file, try to compile and load that class. If successful go to (2).
+* If there exists a local file *UseClass.java* in the same directory as the HTL file, try to compile and load that class. If successful go to (2).
 
-* Otherwise, interpret * `UseClass`* as a fully qualified class name and try to load it from the OSGi environment. If successful go to (2).
-* Otherwise, interpret * `UseClass`* as a path to a HTL or JavaScript file and load that file. If successful goto (4).
+* Otherwise, interpret *UseClass* as a fully qualified class name and try to load it from the OSGi environment. If successful go to (2).
+* Otherwise, interpret *UseClass* as a path to a HTL or JavaScript file and load that file. If successful goto (4).
 
 (2)
 
-* Try to adapt the current **`Resource`** to * `UseClass.`* If successful, go to (3).
+* Try to adapt the current **`Resource`** to *`UseClass.`* If successful, go to (3).
 
-* Otherwise, try to adapt the current **`Request`** to `*UseClass*`.* *If successful, go to (3).
+* Otherwise, try to adapt the current **`Request`** to `*UseClass*`. If successful, go to (3).
 
-* Otherwise, try to instantiate * `UseClass`* with a zero-argument constructor. * *If successful, go to (3).
+* Otherwise, try to instantiate *`UseClass`* with a zero-argument constructor. If successful, go to (3).
 
 (3)
 
-* Within HTL, bind the newly adapted or created object to the name `*localName*`.
-* If `*UseClass*` implements ** [ `io.sightly.java.api.Use`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html) **then call the `init` method, passing the current execution context (in the form of a `javax.scripting.Bindings` object).
+* Within HTL, bind the newly adapted or created object to the name *`localName`*.
+* If *`UseClass`* implements [ `io.sightly.java.api.Use`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html) then call the `init` method, passing the current execution context (in the form of a `javax.scripting.Bindings` object).
 
 (4)
 
-* If `*UseClass*` is a path to a HTL file containing a `data-sly-template`, prepare the template.
+* If *`UseClass`* is a path to a HTL file containing a `data-sly-template`, prepare the template.
 
-* Otherwise, if * `UseClass`* is a path to a JavaScript use-class, prepare the use-class (see [JavaScript Use-API](use-api-javascript.md)).
+* Otherwise, if *`UseClass*` is a path to a JavaScript use-class, prepare the use-class (see [JavaScript Use-API](use-api-javascript.md)).
 
 A few significant points about the above description:
 

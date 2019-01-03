@@ -20,4 +20,8 @@ snippet: y
 
 # The HTL Specification
 
+The HTML Template Language (HTL), formerly known as Sightly, has been introduced with Adobe Experience Manager 6.0 and takes the place of JSP (JavaServer Pages) as the preferred and recommended server-side template system for HTML.
+
+This is the HTL Specification that defines the syntax and the behavior of the language.
+
 The full HTL Specification is detailed in our [Open Source Git repository](https://github.com/adobe/htl-spec)
