@@ -568,7 +568,7 @@ public class ProductSettings {
 
 ### Fix for @extension {#fix-for-extension}
 
-The @extension works in all scenarios in AEM 6.3, before you could have a result like *www.adobe.com.html *and also* *checks whether to add or not add the extension.
+The @extension works in all scenarios in AEM 6.3, before you could have a result like *www.adobe.com.html* and also checks whether to add or not add the extension.
 
 ```xml
 ${ link @ extension = 'html' }

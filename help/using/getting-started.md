@@ -33,7 +33,7 @@ Even within the same component, HTL files can be used alongside JSPs and ESPs. F
 <sly data-sly-include="template.jsp"/>
 ```
 
-### Frequently Asked Questions {#frequently-asked-questions}
+### Frequently Asked Questions{#frequently-asked-questions}
 
 Before getting started with the HTML Template Language, let's start with answering upfront some questions related to the JSP vs HTL topic.
 
