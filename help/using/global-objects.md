@@ -1,7 +1,7 @@
 ---
 title: HTL Global Objects
 seo-title: HTL Global Objects
-description: null
+description: Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including global.jsp.
 seo-description: Without having to specify anything, HTL provides access to all objects that were commonly available in JSP after including global.jsp. 
 uuid: e03affbb-a683-4323-8224-53d8ef59caef
 contentOwner: User
@@ -10,9 +10,6 @@ topic-tags: html-template-language
 content-type: reference
 discoiquuid: fe071a7e-0dae-45c1-9f86-80c558483f87
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
 ---
 
 # HTL Global Objects{#htl-global-objects}
