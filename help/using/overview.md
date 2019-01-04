@@ -1,8 +1,8 @@
 ---
 title: Overview
 seo-title: Overview
-description: null
-seo-description: The purpose of HTML Template Language (HTL), supported by Adobe Experience Manager (AEM), is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
+description: The purpose of HTL supported by AEM, is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
+seo-description: The purpose of HTML Template Language - HTL - supported by Adobe Experience Manager, is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
 uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
@@ -10,9 +10,6 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8f779e08-94c7-43bc-a6e5-d81a9f818c5c
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
 ---
 
 # Overview {#overview}

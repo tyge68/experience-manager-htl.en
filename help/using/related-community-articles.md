@@ -1,7 +1,7 @@
 ---
 title: Related Community Articles
 seo-title: Related Community Articles
-description: null
+description: The AEM community has generated a series of articles, videos, and webinars related to using HTL.
 seo-description: The AEM community has generated a series of articles, videos, and webinars related to using HTL.
 uuid: 970e0146-a623-47b5-87f6-f1b8adbf8f7f
 contentOwner: User
@@ -10,9 +10,6 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: c0025940-2f68-4c45-a3da-73fb443e31cb
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
 ---
 
 # Related Community Articles {#related-community-articles}

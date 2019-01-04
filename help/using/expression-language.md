@@ -1,7 +1,7 @@
 ---
 title: HTL Expression Language
 seo-title: HTL Expression Language
-description: null
+description: The HTML Template Language uses an expression language to access the data structures that provide the dynamic elements of the HTML output.
 seo-description: The HTML Template Language uses an expression language to access the data structures that provide the dynamic elements of the HTML output. 
 uuid: 38b4a259-03b5-4847-91c6-e20377600070
 contentOwner: User
@@ -10,9 +10,6 @@ topic-tags: html-template-language
 content-type: reference
 discoiquuid: 9ba37ca0-f318-48b0-a791-a944a72502ed
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
 ---
 
 # HTL Expression Language {#htl-expression-language}

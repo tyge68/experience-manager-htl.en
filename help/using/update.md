@@ -1,8 +1,8 @@
 ---
-title: What is HTL?
-seo-title: HTL?
-description: null
-seo-description: HTML Template Language (also referred to as HTL) is Adobe Experience Manager’s preferred and recommended server-side template system for HTML. 
+title: What is HTL
+seo-title: What is Adobe HTML Template Language - HTL
+description: HTML Template Language - HTL - is Adobe Experience Manager’s preferred and recommended server-side template system for HTML. 
+seo-description: HTML Template Language - also referred to as HTL - is Adobe Experience Manager’s preferred and recommended server-side template system for HTML. 
 uuid: 196e79f4-f9ff-451d-86e5-394feecd2e50
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
@@ -12,14 +12,11 @@ discoiquuid: f94c2abc-2752-4922-9369-acb76c3f00e9
 disttype: dist5
 gnavtheme: light
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
 ---
 
-# What is HTL?{#what-is-htl}
+# What is HTL? {#what-is-htl}
 
-**Formerly Known As "Sightly"**
+**Formerly Known As *Sightly***
 
 Updated: August 2016
 

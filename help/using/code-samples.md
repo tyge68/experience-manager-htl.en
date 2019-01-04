@@ -1,7 +1,7 @@
 ---
 title: Code Samples
-seo-title: Code Samples
-description: null
+seo-title: Code Samples for AEM HTL
+description: Code samples including the We.Retail Reference Implementation
 seo-description: Code samples including the We.Retail Reference Implementation
 uuid: 4c84532e-1cd0-4faf-b99c-1965557b5d15
 contentOwner: User
@@ -24,4 +24,3 @@ The following are code samples for HTL:
 
 * [HTL TodoMVC Example](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)  
   An AEM + HTL implementation of the famous exercise.
-
