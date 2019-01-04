@@ -1,7 +1,7 @@
 ---
 title: HTL Block Statements
 seo-title: HTL Block Statements
-description: null
+description: HTML Template Language (HTL) block statements are custom data attributes added directly to existing HTML.
 seo-description: HTML Template Language (HTL) block statements are custom data attributes added directly to existing HTML. 
 uuid: 0624fb6e-6989-431b-aabc-1138325393f1
 contentOwner: User
