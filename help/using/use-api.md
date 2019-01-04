@@ -1,8 +1,8 @@
 ---
 title: HTL Use-API
 seo-title: Adobe HTL Use-API
-description: Two APIs are available for HTL: Java Use-API and Javascript Use-API
-seo-description: Two APIs are available for Adobe HTL: Java Use-API and Javascript Use-API
+description: Two APIs are available for HTL - Java Use-API and Javascript Use-API
+seo-description: Two APIs are available for Adobe HTL - Java Use-API and Javascript Use-API
 uuid: ab44aa5c-ce7e-40b9-97fb-e86c6a28405c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
