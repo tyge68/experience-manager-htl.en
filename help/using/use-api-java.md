@@ -486,7 +486,7 @@ The system processes the statement as follows:
 
 * Try to adapt the current **`Resource`** to *`UseClass.`* If successful, go to (3).
 
-* Otherwise, try to adapt the current **`Request`** to `*UseClass*`. If successful, go to (3).
+* Otherwise, try to adapt the current **`Request`** to *`UseClass`*. If successful, go to (3).
 
 * Otherwise, try to instantiate *`UseClass`* with a zero-argument constructor. If successful, go to (3).
 
@@ -499,7 +499,7 @@ The system processes the statement as follows:
 
 * If *`UseClass`* is a path to a HTL file containing a `data-sly-template`, prepare the template.
 
-* Otherwise, if *`UseClass*` is a path to a JavaScript use-class, prepare the use-class (see [JavaScript Use-API](use-api-javascript.md)).
+* Otherwise, if *`UseClass`* is a path to a JavaScript use-class, prepare the use-class (see [JavaScript Use-API](use-api-javascript.md)).
 
 A few significant points about the above description:
 
