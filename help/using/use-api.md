@@ -1,8 +1,8 @@
 ---
 title: HTL Use-API
-seo-title: HTL Use-API
-description: null
-seo-description: "Two APIs are available for HTL: Java Use-API and Javascript Use-API"
+seo-title: Adobe HTL Use-API
+description: Two APIs are available for HTL: Java Use-API and Javascript Use-API
+seo-description: Two APIs are available for Adobe HTL: Java Use-API and Javascript Use-API
 uuid: ab44aa5c-ce7e-40b9-97fb-e86c6a28405c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
@@ -10,9 +10,6 @@ topic-tags: html-template-language
 content-type: reference
 discoiquuid: 89004426-eb59-4b63-913f-51bf98662773
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
 ---
 
 # HTL Use-API {#htl-use-api}
