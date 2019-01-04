@@ -1,8 +1,8 @@
 ---
 title: HTL JavaScript Use-API
 seo-title: HTL JavaScript Use-API
-description: null
-seo-description: The HTML Template Langugae (HTL) JavaScript Use-API enables a HTL file to access helper code written in JavaScript.
+description: The HTML Template Langugae - HTL - JavaScript Use-API enables a HTL file to access helper code written in JavaScript.
+seo-description: The HTML Template Langugae - HTL - JavaScript Use-API enables a HTL file to access helper code written in JavaScript.
 uuid: 7ab34b10-30ac-44d6-926b-0234f52e5541
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
@@ -10,9 +10,7 @@ topic-tags: html-template-language
 content-type: reference
 discoiquuid: 18871af8-e44b-4eec-a483-fcc765dae58f
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-index: y
-internal: n
-snippet: y
+
 ---
 
 # HTL JavaScript Use-API {#htl-javascript-use-api}
