@@ -43,7 +43,7 @@ HTL doesn't really have limitations compared to JSP in the sense that what can b
 **Does HTL support JSP Tag Libraries?**
 No, but as shown in the [Loading Client Libraries](getting-started.md#loading-client-libraries) section, the [template & call](block-statements.md#template-call) statements offer a similar pattern.
 
-**Can the HTL features be extended on an AEM project?** 
+**Can the HTL features be extended on an AEM project?**
 **No, but as shown in the [Loading Client Libraries](getting-started.md#loading-client-libraries) section, the [template & call](block-statements.md#template-call) statements offer a similar pattern.
 No, they cannot. HTL has powerful extension mechanisms for reuse of logic - the [Use-API](getting-started.md#use-api-for-accessing-logic) - and of markup (the [template & call](block-statements.md#template-call) statements), which can be used to modularize the code of projects.
 
@@ -69,10 +69,10 @@ Here's a first example, which could be contained as is in a **`template.html`** 
 
 Two different kind of syntaxes can be distinguished:
 
-* **[Block Statements](block-statements.md)** 
-  To conditionally display the **&lt;h1&gt;** element, a ` [data-sly-test](block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
+* **[Block Statements](block-statements.md)**
+  To conditionally display the **&lt;h1&gt;** element, a `[data-sly-test](block-statements.md#test)` HTML5 data attribute is used. HTL provides multiple such attributes, which allow to attach behavior to any HTML element, and all are prefixed with `data-sly`.  
 
-* **[Expression Language](expression-language.md)** 
+* **[Expression Language](expression-language.md)**
   HTL expressions are delimited by characters `${` and `}`. At runtime, these expressions are evaluated and their value is injected into the outgoing HTML stream.
 
 The two pages linked above provide the detailed list of features available for syntax.
