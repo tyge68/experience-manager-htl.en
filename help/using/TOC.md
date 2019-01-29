@@ -2,7 +2,7 @@
 cloud: experience-cloud
 product: adobe experience manager htl
 archtype: admin
-user-guide: Experience Manager HTL Help
+user-guide-title: Experience Manager HTL Help
 ---
 
 # Experience Manager HTL Help {#using}
