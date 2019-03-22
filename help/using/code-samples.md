@@ -19,7 +19,7 @@ snippet: y
 
 The following are code samples for HTL:
 
-* [We.Retail Reference Implementation](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/we-retail)  
+* [We.Retail Reference Implementation](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/we-retail.html)  
   An AEM site, fully implemented with HTL.
 
 * [HTL TodoMVC Example](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)  
