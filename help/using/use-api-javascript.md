@@ -34,8 +34,8 @@ It contains two files:
 "use strict";
 use(function () {
     var info = {};    
-    info.title = granite.resource.properties["title"];
-    info.description = granite.resource.properties["description"];    
+    info.title = resource.properties["title"];
+    info.description = resource.properties["description"];    
     return info;
 });
 ```
