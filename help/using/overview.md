@@ -1,8 +1,8 @@
 ---
-title: Overview
-seo-title: Overview
+title: AEM HTL Overview
+seo-title: Overview of AEM HTL technical documentation.
 description: The purpose of HTL supported by AEM, is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
-seo-description: The purpose of HTML Template Language - HTL - supported by Adobe Experience Manager, is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
+seo-description: This document lays out the principles and purpose of HTML Template Language - HTL - supported by Adobe Experience Manager. HTL is a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
 uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/HTL
