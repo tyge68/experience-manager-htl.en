@@ -41,8 +41,10 @@ Without having to specify anything, HTL provides access to all objects that were
 
 There are two ways to access properties of variables, with a dot notation, or with a bracket notation:
 
-`${currentPage.title}  
-${currentPage['title']} or ${currentPage["title"]}`
+```
+${currentPage.title}  
+${currentPage['title']} or ${currentPage["title"]}
+```
 
 The simpler dot notation should be preferred for most cases, and the brackets notation should be used to access properties that contain invalid identifier characters, or to access properties dynamically. The following two chapters will provide details about these two cases.
 
@@ -218,7 +220,7 @@ This operator can be used to test if one of two conditions apply, like verifying
 
 As the logical OR operator returns the first variable that is truthy, it can also very conveniently be used to provide fallback values.
 
-conditionally display HTML attributes, because HTL removes attributes with values set by expressions that evaluate to false or to an empty string. So the example below will display **`properties.jcr:`**title if it exists and is not empty, else it falls back to dislaying **`properties.jcr:description`** if it exists and is not empty, else it will display the message "no title or description provided":
+conditionally display HTML attributes, because HTL removes attributes with values set by expressions that evaluate to false or to an empty string. So the example below will display **`properties.jcr:`** title if it exists and is not empty, else it falls back to dislaying **`properties.jcr:description`** if it exists and is not empty, else it will display the message "no title or description provided":
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>

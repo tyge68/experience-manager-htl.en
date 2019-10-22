@@ -42,7 +42,7 @@ We also add some content for this component to render at **`/content/my-example/
 }
 ```
 
-When this content is accessed, the HTL file is executed. Within the HTL code we use the context object **`properties`**to access the current resource's `title` and `description` and display them. The output HTML will be:
+When this content is accessed, the HTL file is executed. Within the HTL code we use the context object **`properties`** to access the current resource's `title` and `description` and display them. The output HTML will be:
 
 ### `view-source:http://localhost:4502/content/my-example.html` {#view-source-http-localhost-content-my-example-html}
 
