@@ -45,6 +45,10 @@ The diagram above shows following improvements in efficiency potentially made po
 * **JSP / HTL:** Since HTL itself doesn't require any Java knowledge and is straight-forward to write, any developer with HTML expertise is empowered to edit the templates.
 * **Java:** Thanks to the clear and simple to use Use-API provided by HTL, the interface with the business logic is clarified, which also benefits Java development overall.
 
+## New section here
+
+Some more text here.
+
 **Read next:**
 
 * [Getting Started with the HTML Template Language](getting-started.md)
