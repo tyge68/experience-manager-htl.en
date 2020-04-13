@@ -28,3 +28,6 @@ The following developer tools are available for HTL:
 * [AEM Eclipse extension](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/aem-eclipse.html)  
   A tool for back-end developers to create AEM projects and easily edit them.
 
+* [New Link](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/aem-eclipse.html)  
+  Some new links.
+
