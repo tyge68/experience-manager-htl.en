@@ -43,7 +43,7 @@ The diagram above shows following improvements in efficiency potentially made po
 
 * **HTML / CSS / JS:** Because the HTML developers are able to directly edit HTL templates, the front-end designs don't have to be implemented separately from the AEM project anymore, but can be implemented directly on the actual AEM components. This reduces painful iterations with the full-stack Java developers.
 * **JSP / HTL:** Since HTL itself doesn't require any Java knowledge and is straight-forward to write, any developer with HTML expertise is empowered to edit the templates.
-* **Java:** Thanks to the clear and simple to use Use-API provided by HTL, the interface with the business logic is clarified, which also benefits Java development overall.
+* **Java:** Thanks to the **clear** and simple to use Use-API provided by HTL, the interface with the business logic is clarified, which also benefits Java development overall.
 
 ## New section here
 
