@@ -20,7 +20,7 @@ mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 
 Updated: August 2016
 
-HTML Template Language (also referred to as HTL) is Adobe Experience Manager’s preferred and recommended server-side template system for HTML. As in all HTML server-side templating systems, a HTL file defines the output sent to the browser by specifying the HTML itself, some basic presentation logic and variables to be evaluated at runtime.
+**HTML Template** Language (also referred to as HTL) is Adobe Experience Manager’s preferred and recommended server-side template system for HTML. As in all HTML server-side templating systems, a HTL file defines the output sent to the browser by specifying the HTML itself, some basic presentation logic and variables to be evaluated at runtime.
 
 In AEM 6.0 and 6.1 HTL was referred to as **Sightly**. We are renaming it to “HTML Template Language” to clarify what the specification is for and to align with Adobe’s naming guidelines in general. This naming change takes place from August 2016 and applies to AEM version 6.0, 6.1, 6.2 and all versions going forward.
 
