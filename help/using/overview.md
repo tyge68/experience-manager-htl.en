@@ -35,7 +35,7 @@ These capabilities allow HTML developers without Java knowledge and with little 
 
 Increased security, simplified development and improved team collaboration, translates for AEM projects in reduced effort, faster time to market (TTM), and lower total cost of ownership (TCO).
 
-Concretely, from what has been observed when re-implementing the Adobe.com site with the HTML Template Language is that the cost and duration of the project could be reduced by about 25%.
+Concretely, from what has been observed when re-implementing the Adobe.com site with the HTML Template Language is that the cost and duration of the project could be reduced by about 25%, **and more**.
 
 ![](assets/chlimage_1.png)
 
